@@ -21,15 +21,11 @@ public class WorkerController {
 
     @PutMapping("/save")
     public void save(@RequestBody Worker worker) {
-        System.out.println(worker);
-
         workerService.saveWorker(worker);
     }
 
     @PutMapping("/saveAll")
     public void saveAll(@RequestBody List<Worker> workers) {
-        System.out.println(workers);
-
         workerService.saveAllWorkers(workers);
     }
 }

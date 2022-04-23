@@ -10,10 +10,4 @@ public interface WorkerService {
     void saveWorker(Worker worker);
 
     void saveAllWorkers(List<Worker> workers);
-
-    Object getWorkerById(Long workerId);
-
-    void updateWorkerById(Long workerId, Worker worker);
-
-    void deleteWorkerById(Long workerId);
 }

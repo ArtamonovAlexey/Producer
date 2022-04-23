@@ -27,24 +27,9 @@ public class WorkerController {
     }
 
     @PutMapping("/saveAll")
-    public void saveAll(@RequestBody List<Worker> workers) throws JsonProcessingException {
+    public void saveAll(@RequestBody List<Worker> workers) {
         System.out.println(workers);
 
         workerService.saveAllWorkers(workers);
-    }
-
-    @GetMapping("/getById/{id}")
-    public Object get(@PathVariable Long id) {
-        return workerService.getWorkerById(id);
-    }
-
-    @PostMapping("/updateById/{id}")
-    public void update(@PathVariable Long id, @RequestBody Worker worker) {
-        workerService.updateWorkerById(id, worker);
-    }
-
-    @DeleteMapping("/deleteById/{id}")
-    public void delete(@PathVariable Long id) {
-        workerService.deleteWorkerById(id);
     }
 }

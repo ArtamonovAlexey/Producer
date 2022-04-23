@@ -8,15 +8,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 
 @SpringBootApplication
 @EnableKafka
-//@ComponentScan(basePackages = {
-//        "ru.artamonov.producer.config",
-//        "ru.artamonov.producer.controller",
-//        "ru.artamonov.producer.service",
-//        "ru.artamonov.producer.kafka.enums"
-//})
-@PropertySource({
-        "classpath:kafka.properties"
-})
+@PropertySource("classpath:kafka.properties")
 public class ProducerApplication {
 
     public static void main(String[] args) {
